@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 75px 100px;
+            background: #FFFFFF;
+            width: 100%;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding-bottom: 30px;
+            gap: 20px;
+        }
+
+        .clients-review {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #31572C;
+        }
+
+        .success-stories {
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 59px;
+            text-transform: capitalize;
+            color: #2D2D2D;
+        }
+
+        .testimonial-box {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            overflow-x: auto;
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 35px;
+            gap: 20px;
+            width: 363.5px;
+            border-radius: 30px;
+        }
+
+        .primary-box {
+            background: #31572C;
+            color: #FFFFFF;
+        }
+
+        .secondary-box {
+            background: #F9F9F9;
+            color: #6E6E6E;
+        }
+
+        .quote {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .primary-box .quote {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .client {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .client-img {
+            width: 65px;
+            height: 65px;
+            background: url('Checker.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .client-name {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        .primary-box .client-name {
+            color: #FFFFFF;
+        }
+
+        .secondary-box .client-name {
+            color: #2D2D2D;
+        }
+
+        .client-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .primary-box .client-title {
+            color: #ECF39E;
+        }
+
+        .secondary-box .client-title {
+            color: #31572C;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonials {
+                padding: 50px 20px;
+            }
+
+            .heading {
+                padding-bottom: 20px;
+            }
+
+            .success-stories {
+                font-size: 35px;
+                line-height: 45px;
+            }
+
+            .testimonial-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonials">
+        <div class="heading">
+            <p class="clients-review">Clients Review</p>
+            <h2 class="success-stories">Success Stories from Satisfied Clients</h2>
+        </div>
+        <div class="testimonial-box">
+            <div class="box primary-box">
+                <p class="quote">“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque “</p>
+                <div class="client">
+                    <div class="client-img"></div>
+                    <div class="info">
+                        <p class="client-name">Mr. John Doe</p>
+                        <p class="client-title">Clients</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box secondary-box">
+                <p class="quote">“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque “</p>
+                <div class="client">
+                    <div class="client-img"></div>
+                    <div class="info">
+                        <p class="client-name">Mr. John Doe</p>
+                        <p class="client-title">Clients</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box secondary-box">
+                <p class="quote">“ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque “</p>
+                <div class="client">
+                    <div class="client-img"></div>
+                    <div class="info">
+                        <p class="client-name">Mr. John Doe</p>
+                        <p class="client-title">Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

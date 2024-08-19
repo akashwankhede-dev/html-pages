@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* Centering Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 40px; /* Gap between title and wrapper */
+        }
+
+        /* Title Container */
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 20px;
+            width: 720px;
+            height: 162px;
+        }
+
+        /* Training Plans for Corporations */
+        .training-plans {
+            width: 720px;
+            height: 24px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #31572C;
+        }
+
+        /* Choose from a variety of pricing plans to meet your corporate needs */
+        .pricing-plans {
+            width: 720px;
+            height: 118px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 59px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #2D2D2D;
+        }
+
+        /* Wrapper */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 30px;
+            width: 1240px;
+            height: 470px;
+        }
+
+        /* Box */
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 35px;
+            gap: 25px;
+            width: 287.5px;
+            height: 470px;
+            background: #FFFFFF;
+            border-radius: 30px;
+        }
+
+        .box-dark {
+            background: #31572C;
+        }
+
+        /* Title */
+        .title {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 0 25px;
+            gap: 10px;
+            width: 217.5px;
+            height: 106px;
+            border-bottom: 1px dashed #DADADA;
+        }
+
+        .title-dark {
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+        }
+
+        /* Trial */
+        .trial {
+            width: 217.5px;
+            height: 24px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #9D9D9D;
+        }
+
+        .trial-dark {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* Frame 2 */
+        .frame-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 10px;
+            width: 217.5px;
+            height: 47px;
+        }
+
+        .price {
+            width: 63px;
+            height: 47px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 47px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .duration {
+            width: 51px;
+            height: 24px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        /* Icon List */
+        .icon-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 15px;
+            width: 217.5px;
+            height: 190px;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 15px;
+            width: 217.5px;
+            height: 26px;
+        }
+
+        .circle-check {
+            width: 20px;
+            height: 20px;
+            font-family: 'Font Awesome 6 Free', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 20px;
+            color: #31572C;
+        }
+
+        .circle-check-dark {
+            color: #FFFFFF;
+        }
+
+        .text {
+            width: 182.5px;
+            height: 26px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 26px;
+            color: #6E6E6E;
+        }
+
+        .text-dark {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* Button */
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 38px;
+            gap: 10px;
+            width: 217.5px;
+            height: 54px;
+            background: #4F772D;
+            border-radius: 30px;
+        }
+
+        .button-dark {
+            background: #ECF39E;
+        }
+
+        .button-text {
+            width: 98px;
+            height: 24px;
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        .button-text-dark {
+            color: #4F772D;
+        }
+
+        .long-arrow-right {
+            width: 16px;
+            height: 24px;
+            font-family: 'Font Awesome 6 Free', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+
+        .long-arrow-right-dark {
+            color: #4F772D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <div class="training-plans">
+                Training Plans for Corporations
+            </div>
+            <div class="pricing-plans">
+                Choose from a variety of pricing plans to meet your corporate needs
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="box">
+                <div class="title">
+                    <div class="trial">Trial</div>
+                    <div class="frame-2">
+                        <div class="price">$0</div>
+                        <div class="duration">One Day</div>
+                    </div>
+                </div>
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Working Hours</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Full Service Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Monthly Credit Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Free Choice Trainer</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Service Guarantee</span>
+                    </div>
+                </div>
+                <div class="button">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-arrow-right long-arrow-right"></i>
+                </div>
+            </div>
+            
+            <div class="box box-dark">
+                <div class="title">
+                    <div class="trial">Monthly</div>
+                    <div class="frame-2">
+                        <div class="price">$59</div>
+                        <div class="duration">/ Team</div>
+                    </div>
+                </div>
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Working Hours</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Full Service Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Monthly Credit Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Free Choice Trainer</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Service Guarantee</span>
+                    </div>
+                </div>
+                <div class="button button-dark">
+                    <span class="button-text button-text-dark">Learn More</span>
+                    <i class="fas fa-arrow-right long-arrow-right long-arrow-right-dark"></i>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="title">
+                    <div class="trial">6 Month</div>
+                    <div class="frame-2">
+                        <div class="price">$39</div>
+                        <div class="duration">/ Team</div>
+                    </div>
+                </div>
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Working Hours</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Full Service Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Monthly Credit Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Free Choice Trainer</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Service Guarantee</span>
+                    </div>
+                </div>
+                <div class="button">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-arrow-right long-arrow-right"></i>
+                </div>
+            </div>
+
+            <!-- New Box Section -->
+            <div class="box">
+                <div class="title">
+                    <div class="trial">Annual</div>
+                    <div class="frame-2">
+                        <div class="price">$299</div>
+                        <div class="duration">/ Team</div>
+                    </div>
+                </div>
+                <div class="icon-list">
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Working Hours</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Full Service Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Monthly Credit Talk</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Free Choice Trainer</span>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-check-circle circle-check"></i>
+                        <span class="text">Service Guarantee</span>
+                    </div>
+                </div>
+                <div class="button">
+                    <span class="button-text">Learn More</span>
+                    <i class="fas fa-arrow-right long-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

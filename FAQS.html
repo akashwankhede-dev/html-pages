@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* Wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 60px;
+    width: 1240px;
+    height: 103px;
+}
+
+/* Title */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+    width: 821px;
+    height: 103px;
+}
+
+/* Frequently Asked Questions */
+.frequently-asked-questions {
+    width: 821px;
+    height: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #31572C;
+}
+
+/* Find answers to common questions */
+.find-answers {
+    width: 821px;
+    height: 59px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 59px;
+    text-transform: capitalize;
+    color: #2D2D2D;
+}
+
+/* Description */
+.description {
+    width: 359px;
+    height: 78px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #6E6E6E;
+}
+
+/* FAQs */
+.faqs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 35px;
+    width: 1240px;
+    height: 313px;
+}
+
+/* FAQ Content */
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+    width: 602.5px;
+    height: 313px;
+}
+
+/* Accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+    width: 602.5px;
+    height: 139px;
+}
+
+.accordion.active .accordion-content {
+    display: block;
+}
+
+.accordion-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 30px;
+    width: 602.5px;
+    height: 67px;
+    background: #F9F9F9;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.accordion-title span {
+    width: 474.5px;
+    height: 27px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #2D2D2D;
+}
+
+.accordion-title i {
+    width: 18px;
+    height: 20px;
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2D2D2D;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0px 20px;
+    gap: 10px;
+    width: 602.5px;
+    height: 52px;
+}
+
+.accordion-content p {
+    width: 562.5px;
+    height: 52px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #6E6E6E;
+}
+
+</style>
+<body>
+    <section class="wrapper">
+        <div class="title">
+            <div class="frequently-asked-questions">Frequently Asked Questions</div>
+            <h1 class="find-answers">Find answers to common questions</h1>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+    <section class="faqs">
+        <div class="faq-content">
+            <div class="accordion active">
+                <div class="accordion-title">
+                    <span>How Long Working Time?</span>
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-title">
+                    <span>Where The Office Work?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-title">
+                    <span>Office Hour Information?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.accordion-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const accordion = title.parentElement;
+                accordion.classList.toggle('active');
+                const content = accordion.querySelector('.accordion-content');
+                content.style.display = accordion.classList.contains('active') ? 'block' : 'none';
+                // Toggle chevron icon
+                const icon = title.querySelector('i');
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.experts-section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #F9F9F9;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accent-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #31572C;
+}
+
+.main-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2D2D2D;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./header\ img.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+}
+
+.play-icon {
+    font-weight: 900;
+    font-size: 35px;
+    color: #31572C;
+}
+
+.image-box {
+    width: 100%;
+    height: 300px;
+    background: url('./header\ img.jpg') no-repeat center center/cover;
+    border-radius: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.subheading {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    color: #2D2D2D;
+}
+
+.body-text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    color: #6E6E6E;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .experts-section {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 60px;
+        padding: 100px;
+    }
+
+    .left, .right {
+        width: 50%;
+        height: auto;
+    }
+
+    .main-heading {
+        font-size: 45px;
+        line-height: 59px;
+    }
+
+    .video, .image-box {
+        height: 501px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="experts-section">
+        <div class="left">
+            <div class="title">
+                <h2 class="accent-text">Corporate Training Experts at Your Service</h2>
+                <h1 class="main-heading">
+                    Experience and deep expertise in corporate team development
+                </h1>
+            </div>
+            <div class="video">
+                <div class="play-button">
+                    <span class="play-icon">&#9654;</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="image-box"></div>
+            <div class="content">
+                <h3 class="subheading">15 Years Business Choicing</h3>
+                <p class="body-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

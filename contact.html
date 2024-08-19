@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Container for centering */
+        .contact-wrapper {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+
+        /* Contact */
+        .contact {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 60px;
+            width: 100%; /* Ensure full width */
+            max-width: 1440px; /* Limit maximum width */
+            background: #FFFFFF;
+            box-sizing: border-box;
+        }
+
+        /* Left */
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px;
+            gap: 20px;
+            width: 50%; /* Take up 50% of the width */
+            background: #F9F9F9;
+            border-radius: 30px;
+        }
+
+        /* Right */
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 0;
+            gap: 35px;
+            width: 50%; /* Take up 50% of the width */
+        }
+
+        /* Form */
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 30px;
+            width: 100%;
+        }
+
+        /* Row */
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0;
+            gap: 30px;
+            width: 100%; /* Ensures full width */
+        }
+
+        /* Form Field */
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 10px;
+            width: 100%;
+        }
+
+        /* Form Label */
+        .form-label {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+            color: #2D2D2D;
+        }
+
+        /* Form Field Active */
+        .form-field-active {
+            width: 100%;
+            max-width: 230px; /* Limit maximum width */
+            height: 58px;
+            background: #FFFFFF;
+            border-radius: 30px;
+            padding: 17px 20px;
+            border: 1px solid #DDDDDD;
+            box-sizing: border-box;
+        }
+
+        /* Textarea */
+        .form-field textarea {
+            width: 100%;
+            height: 117px;
+            padding: 18px 20px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            color: #6E6E6E;
+            border: 1px solid #DDDDDD;
+            border-radius: 30px;
+            box-sizing: border-box;
+            overflow: hidden; /* Hide scrollbar */
+            resize: none; /* Prevent resizing */
+        }
+
+        /* Button */
+        .button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 38px;
+            gap: 10px;
+            background: #4F772D;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+
+        .button-text {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* Title */
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Subheading */
+        .subheading {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #31572C;
+        }
+
+        /* Heading */
+        .heading {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 59px;
+            text-transform: capitalize;
+            color: #2D2D2D;
+        }
+
+        /* Body Text */
+        .body-text {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 26px;
+            color: #6E6E6E;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            width: 100%;
+        }
+
+        /* Box */
+        .box {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0;
+            gap: 25px;
+            width: 100%;
+            max-width: 277.5px; /* Limit maximum width */
+        }
+
+        /* Icon */
+        .box i {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 35px;
+            color: #31572C;
+            text-align: center;
+        }
+
+        /* Box Content */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 6px;
+        }
+
+        /* Heading Small */
+        .heading-small {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.06em;
+            color: #2D2D2D;
+        }
+
+        /* Body Text */
+        .body-text {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            color: #6E6E6E;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-wrapper">
+        <section class="contact">
+            <div class="left">
+                <form class="form">
+                    <div class="row">
+                        <div class="form-field">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" id="first-name" class="form-field-active" placeholder="Ex. John">
+                        </div>
+                        <div class="form-field">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" id="last-name" class="form-field-active" placeholder="Ex. Doe">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-field">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-field-active" placeholder="Ex. Hello@Email.co">
+                        </div>
+                        <div class="form-field">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-field-active" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-field">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-field" placeholder="Your Message Here..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="button">
+                        <span class="button-text">Send Message</span>
+                        <i class="fas fa-long-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="right">
+                <div class="title">
+                    <p class="subheading">Stay Tuned With Us</p>
+                    <h1 class="heading">Keep In Touch With Our Professional Team</h1>
+                    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="box">
+                            <i class="fas fa-map"></i>
+                            <div class="content">
+                                <p class="heading-small">Head Office</p>
+                                <p class="body-text">Gresik United East Java</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-map-pin"></i>
+                            <div class="content">
+                                <p class="heading-small">Secondary Office</p>
+                                <p class="body-text">Jakarta Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box">
+                            <i class="fas fa-envelope"></i>
+                            <div class="content">
+                                <p class="heading-small">Email Address</p>
+                                <p class="body-text">Hello@Email.co</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-phone-square"></i>
+                            <div class="content">
+                                <p class="heading-small">Telephone</p>
+                                <p class="body-text">+62 123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

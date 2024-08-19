@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Quote Container */
+.quote-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 75px 100px; /* Original padding */
+    gap: 60px; /* Original gap */
+    isolation: isolate;
+    background: linear-gradient(45deg, #132A13 25%, #31572C 25%, #31572C 50%, #132A13 50%, #132A13 75%, #31572C 75%);
+    background-size: 40px 40px; /* Grid size */
+    position: relative;
+    width: 100%;
+    min-height: 230px;
+}
+
+/* Quote Box */
+.quote-box {
+    position: absolute;
+    width: 418px;
+    height: 230px;
+    left: 0;
+    bottom: 0;
+    background: transparent; /* Transparent to show the grid */
+    z-index: 0;
+}
+
+/* Frame */
+.frame {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 10px;
+    z-index: 1;
+    width: 100%;
+    height: 80px; /* Original height */
+}
+
+/* Quote Text */
+.quote-text {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.5rem; /* 40px */
+    color: #FFFFFF;
+    z-index: 1;
+    flex-grow: 1;
+    width: 100%;
+    text-align: justify; /* Ensures full-width text alignment */
+}
+
+/* Quote Icon */
+.quote-icon {
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.75);
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .quote-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 15px;
+    }
+
+    .quote-box {
+        position: relative;
+        width: 100%;
+        height: 150px; /* Adjusted height */
+    }
+
+    .frame {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .quote-text {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+    }
+
+    .quote-icon {
+        font-size: 60px;
+        line-height: 60px;
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quote-container {
+        padding: 30px 10px;
+    }
+
+    .quote-box {
+        height: 120px;
+    }
+
+    .quote-text {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.75rem; /* 28px */
+    }
+
+    .quote-icon {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+</style>
+<body>
+    <div class="quote-container">
+        <div class="quote-box"></div>
+        <div class="frame">
+            <p class="quote-text">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua “</p>
+            <div class="quote-icon">”</div>
+        </div>
+    </div>
+        
+</body>
+</html>
